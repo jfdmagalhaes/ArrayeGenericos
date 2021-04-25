@@ -13,18 +13,21 @@ namespace ByteBank.SistemaAgencia
         static void Main(string[] args)
         {
             // açúcar sintático 
-            ContaCorrente[] contas = new ContaCorrente[]
-           {
-                new ContaCorrente(874, 5679787),
-                new ContaCorrente(874, 4456668),
-                new ContaCorrente(874, 7781438),
-           };
-
-            for (int indice = 0; indice < contas.Length; indice++)
+            ListaDeContaCorrente lista = new ListaDeContaCorrente();
             {
-                ContaCorrente contaAtual = contas[indice];
-                Console.WriteLine($"Conta {indice} {contaAtual.Numero}");
-            }
+
+                lista.Adicionar(new ContaCorrente(345, 23462));
+                lista.Adicionar(new ContaCorrente(363, 22451));
+                lista.Adicionar(new ContaCorrente(735, 23552));
+                lista.Adicionar(new ContaCorrente(363, 22451));
+                lista.Adicionar(new ContaCorrente(735, 23552));
+                lista.Adicionar(new ContaCorrente(363, 22451));
+                lista.Adicionar(new ContaCorrente(363, 22451));
+                lista.Adicionar(new ContaCorrente(735, 23552));
+                lista.Adicionar(new ContaCorrente(735, 23552));
+            };
+
+   
 
             Console.ReadLine();
         }
